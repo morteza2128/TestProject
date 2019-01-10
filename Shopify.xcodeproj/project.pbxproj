@@ -8,10 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		72E565DC21E672AA0050085D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E565DB21E672AA0050085D /* AppDelegate.swift */; };
-		72E565DE21E672AA0050085D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E565DD21E672AA0050085D /* ViewController.swift */; };
 		72E565E121E672AA0050085D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72E565DF21E672AA0050085D /* Main.storyboard */; };
 		72E565E321E672AB0050085D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72E565E221E672AB0050085D /* Assets.xcassets */; };
 		72E565E621E672AB0050085D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72E565E421E672AB0050085D /* LaunchScreen.storyboard */; };
+		72E565EE21E68B100050085D /* Network Brain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E565ED21E68B100050085D /* Network Brain.swift */; };
+		72E565F021E68B5E0050085D /* ServerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E565EF21E68B5E0050085D /* ServerConfig.swift */; };
+		72E565F221E68B940050085D /* StringCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E565F121E68B940050085D /* StringCore.swift */; };
+		72E565F421E68BB40050085D /* String.strings in Resources */ = {isa = PBXBuildFile; fileRef = 72E565F321E68BB40050085D /* String.strings */; };
+		72E565F921E690BF0050085D /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E565F821E690BF0050085D /* Collection.swift */; };
+		72E565FD21E692C10050085D /* CollectionsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E565FC21E692C10050085D /* CollectionsListViewController.swift */; };
+		72E565FF21E692DC0050085D /* CollectiosListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E565FE21E692DC0050085D /* CollectiosListViewModel.swift */; };
+		72E5660121E6977C0050085D /* CollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E5660021E6977C0050085D /* CollectionViewModel.swift */; };
+		72E5660421E69BA60050085D /* CellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E5660321E69BA60050085D /* CellProtocol.swift */; };
+		72E5660621E6B1A20050085D /* CollectionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E5660521E6B1A20050085D /* CollectionService.swift */; };
+		72E5660821E6B41C0050085D /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E5660721E6B41C0050085D /* Error.swift */; };
 		A2B5112F6F2AF3FFC7726D9F /* Pods_Shopify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 298EE961527778808A6D541E /* Pods_Shopify.framework */; };
 /* End PBXBuildFile section */
 
@@ -19,11 +29,21 @@
 		298EE961527778808A6D541E /* Pods_Shopify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shopify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		72E565D821E672AA0050085D /* Shopify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shopify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72E565DB21E672AA0050085D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		72E565DD21E672AA0050085D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		72E565E021E672AA0050085D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		72E565E221E672AB0050085D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		72E565E521E672AB0050085D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		72E565E721E672AB0050085D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		72E565ED21E68B100050085D /* Network Brain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Network Brain.swift"; sourceTree = "<group>"; };
+		72E565EF21E68B5E0050085D /* ServerConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerConfig.swift; sourceTree = "<group>"; };
+		72E565F121E68B940050085D /* StringCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringCore.swift; sourceTree = "<group>"; };
+		72E565F321E68BB40050085D /* String.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = String.strings; sourceTree = "<group>"; };
+		72E565F821E690BF0050085D /* Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
+		72E565FC21E692C10050085D /* CollectionsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionsListViewController.swift; sourceTree = "<group>"; };
+		72E565FE21E692DC0050085D /* CollectiosListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectiosListViewModel.swift; sourceTree = "<group>"; };
+		72E5660021E6977C0050085D /* CollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewModel.swift; sourceTree = "<group>"; };
+		72E5660321E69BA60050085D /* CellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellProtocol.swift; sourceTree = "<group>"; };
+		72E5660521E6B1A20050085D /* CollectionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionService.swift; sourceTree = "<group>"; };
+		72E5660721E6B41C0050085D /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		C4F55C20EA57E75E7292A46D /* Pods-Shopify.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shopify.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Shopify/Pods-Shopify.debug.xcconfig"; sourceTree = "<group>"; };
 		F5CE133B34D6800FABC4482A /* Pods-Shopify.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shopify.release.xcconfig"; path = "Pods/Target Support Files/Pods-Shopify/Pods-Shopify.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -70,13 +90,71 @@
 			isa = PBXGroup;
 			children = (
 				72E565DB21E672AA0050085D /* AppDelegate.swift */,
-				72E565DD21E672AA0050085D /* ViewController.swift */,
 				72E565DF21E672AA0050085D /* Main.storyboard */,
 				72E565E221E672AB0050085D /* Assets.xcassets */,
 				72E565E421E672AB0050085D /* LaunchScreen.storyboard */,
 				72E565E721E672AB0050085D /* Info.plist */,
+				72E5660221E69B550050085D /* Custom */,
+				72E565FA21E692890050085D /* Scenes */,
+				72E565F721E690B30050085D /* Entities */,
+				72E565F521E68C720050085D /* Core */,
+				72E565F621E68C7F0050085D /* Strings */,
 			);
 			path = Shopify;
+			sourceTree = "<group>";
+		};
+		72E565F521E68C720050085D /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				72E565ED21E68B100050085D /* Network Brain.swift */,
+				72E565EF21E68B5E0050085D /* ServerConfig.swift */,
+				72E5660521E6B1A20050085D /* CollectionService.swift */,
+				72E5660721E6B41C0050085D /* Error.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		72E565F621E68C7F0050085D /* Strings */ = {
+			isa = PBXGroup;
+			children = (
+				72E565F121E68B940050085D /* StringCore.swift */,
+				72E565F321E68BB40050085D /* String.strings */,
+			);
+			path = Strings;
+			sourceTree = "<group>";
+		};
+		72E565F721E690B30050085D /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				72E565F821E690BF0050085D /* Collection.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		72E565FA21E692890050085D /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				72E565FB21E692A00050085D /* Collections View */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		72E565FB21E692A00050085D /* Collections View */ = {
+			isa = PBXGroup;
+			children = (
+				72E565FC21E692C10050085D /* CollectionsListViewController.swift */,
+				72E565FE21E692DC0050085D /* CollectiosListViewModel.swift */,
+				72E5660021E6977C0050085D /* CollectionViewModel.swift */,
+			);
+			path = "Collections View";
+			sourceTree = "<group>";
+		};
+		72E5660221E69B550050085D /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				72E5660321E69BA60050085D /* CellProtocol.swift */,
+			);
+			path = Custom;
 			sourceTree = "<group>";
 		};
 		F43F6DE3E9FD12811DC5BE49 /* Pods */ = {
@@ -149,6 +227,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				72E565E621E672AB0050085D /* LaunchScreen.storyboard in Resources */,
+				72E565F421E68BB40050085D /* String.strings in Resources */,
 				72E565E321E672AB0050085D /* Assets.xcassets in Resources */,
 				72E565E121E672AA0050085D /* Main.storyboard in Resources */,
 			);
@@ -183,10 +262,18 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Shopify/Pods-Shopify-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/DZNEmptyDataSet/DZNEmptyDataSet.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/MZAppearance/MZAppearance.framework",
 				"${BUILT_PRODUCTS_DIR}/MZFormSheetPresentationController/MZFormSheetPresentationController.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxRealm/RxRealm.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework",
@@ -194,10 +281,18 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DZNEmptyDataSet.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MZAppearance.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MZFormSheetPresentationController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRealm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftMessages.framework",
@@ -214,7 +309,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				72E565DE21E672AA0050085D /* ViewController.swift in Sources */,
+				72E565FD21E692C10050085D /* CollectionsListViewController.swift in Sources */,
+				72E5660421E69BA60050085D /* CellProtocol.swift in Sources */,
+				72E565FF21E692DC0050085D /* CollectiosListViewModel.swift in Sources */,
+				72E5660821E6B41C0050085D /* Error.swift in Sources */,
+				72E565F221E68B940050085D /* StringCore.swift in Sources */,
+				72E565F921E690BF0050085D /* Collection.swift in Sources */,
+				72E5660121E6977C0050085D /* CollectionViewModel.swift in Sources */,
+				72E565EE21E68B100050085D /* Network Brain.swift in Sources */,
+				72E5660621E6B1A20050085D /* CollectionService.swift in Sources */,
+				72E565F021E68B5E0050085D /* ServerConfig.swift in Sources */,
 				72E565DC21E672AA0050085D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

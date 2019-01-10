@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum ServerGeneralErros :String{
+enum ServerGeneralError :String{
   
   case jsonFormat                = "JsonFormatError"
   case croptedData               = "CroptedData"

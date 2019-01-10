@@ -10,7 +10,10 @@ target 'Shopify' do
     pod 'SVProgressHUD'
     pod 'DZNEmptyDataSet'
     pod 'MZFormSheetPresentationController'
-    pod 'Alamofire'
+    pod 'AlamofireObjectMapper'
+    pod 'RxSwift'
+    pod 'RxCocoa'
+    pod 'RxRealm'
 
 
   # Pods for Montreal Metro

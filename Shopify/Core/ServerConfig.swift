@@ -8,30 +8,35 @@
 
 import Foundation
 
-class ServerResponse: NSObject {
+struct ServerResponse {
   
   var backData : AnyObject?
-  var hasError : Bool?
-  var message  : String?
-  var statusCode : NSInteger?
+  let statusCode : Int
+  
+  init(statusCode:Int = -1) {
+    self.statusCode = statusCode
+  }
+  
+  
   
 }
 
-class Config: NSObject {
+struct ServerConfig {
+  static let baseUrl = "https://shopicruit.myshopify.com/admin/"
+  //let prort = "8080"
   
-  static let sharedInstance        = Config()
-  public static let server         = Server()
-}
-
-struct Server {
-  let baseUrl = "https://itunes.apple.com/"
+  //https://shopicruit.myshopify.com/admin/custom_collections.json?page=1&access_token=c32313df0d0ef512ca64d5b336a0d7c6
+  //https://shopicruit.myshopify.com/admin/collects.json?collection_id=68424466488&page=1&access_token=c32313df0d0ef512ca64d5b336a0d7c6
+  //https://shopicruit.myshopify.com/admin/products.json?ids=2759137027,2759143811&page=1&access_token=c32313df0d0ef512ca64d5b336a0d7c6
   
   //Other Server config like version port if need
 }
 
 enum Endpoint: String {
-  case search   = "search/"
-  
+  case collections = "custom_collections.json"
+  case collects    = "collects.json"
+  case products    = "products.json"
+
   var url: String {
     return rawValue
   }
