@@ -23,7 +23,6 @@ class CustomVC: UIViewController {
     
     return storyboard.instantiateViewController(ofType: T.self).then { vc in
       vc.navigator = navigator
-      
     }
   }
   

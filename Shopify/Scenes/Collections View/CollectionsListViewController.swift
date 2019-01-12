@@ -68,7 +68,6 @@ class CollectionsListViewController: CustomVC {
     
     output.items.drive(tableView.rx.items(cellIdentifier: CollectionTableViewCell.reuseIdentifier, cellType: CollectionTableViewCell.self)) { tv, viewModel, cell in
       cell.bind(viewModel)
-      
       }.disposed(by: disposeBag)
     
     output.fetching
@@ -79,8 +78,11 @@ class CollectionsListViewController: CustomVC {
       .drive(errorBinding)
       .disposed(by: disposeBag)
     
-    output.selectedCollection.drive(onNext: { collection in
-      self.navigator.show(segue: .collectionProducts(collectionId: collection.id), sender: self, style: .push)
+    output.selectedCollection.drive(onNext: { [weak self] collection in
+      guard let stongSelf = self else{
+        return
+      }
+      stongSelf.navigator.show(segue: .collectionProducts(collectionId: collection.id), sender: self, style: .push)
     })
       .disposed(by: disposeBag)
 

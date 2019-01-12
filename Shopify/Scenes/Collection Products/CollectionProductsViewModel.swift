@@ -18,8 +18,8 @@ final class CollectionProductsViewModel {
 
   
   init(collectionId:String) {
-    self.collectionId = collectionId
-    self.network = Network(.collects)
+    self.collectionId   = collectionId
+    self.network        = Network(.collects)
     self.productNetwork = Network(.products)
   }
   
