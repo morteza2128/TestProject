@@ -44,6 +44,8 @@ class ServiceError {
       return ServerGeneralError.noInternetConnectionError.localized
     case .json:
       return ServerGeneralError.noInternetConnectionError.localized
+    case .missingKey:
+      return ServerGeneralError.missingImportantKey.localized
     default:
       return ServerGeneralError.unknowError.localized
     }
@@ -59,7 +61,8 @@ enum ErrorCodes : Int{
   case network     = 2
   case timeOut     = 3
   case serverError = 4
-  case other       = 5
+  case missingKey  = 5
+  case other       = 6
   
 }
 

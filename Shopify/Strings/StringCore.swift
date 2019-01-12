@@ -16,6 +16,7 @@ enum ServerGeneralError :String{
   case unauthorized              = "Unauthorized"
   case requestTimeOutError       = "RequestTimeOutError"
   case noInternetConnectionError = "NoInternetConnectionError"
+  case missingImportantKey       = "MissingImportantKey"
   
 }
 

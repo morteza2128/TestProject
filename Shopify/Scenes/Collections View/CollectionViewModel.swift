@@ -8,24 +8,19 @@
 
 import Foundation
 
-class CollectionViewModel : CollectionRepresentable{
+struct CollectionViewModel {
   
   let title: String
   let imageUrl: URL?
-  let handle: String
+  let date: String
+  let collection : Collection
   
   init(_ collection:Collection) {
-    self.title = collection.title
-    self.imageUrl = collection.imageUrl
-    self.handle = collection.handle
+    self.collection = collection
+    self.title      = collection.title
+    self.imageUrl   = collection.imageUrl
+    self.date       = collection.date
     
   }
   
-}
-
-@objc protocol CollectionRepresentable {
-  
-  var title: String { get }
-  @objc optional var imageUrl: String { get }
-  var handle: String { get }
 }

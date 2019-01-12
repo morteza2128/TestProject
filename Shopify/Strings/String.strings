@@ -13,6 +13,7 @@
 "NoInternetConnectionError" = "Please check your internet connection";
 "UnknowServerError"         = "UnknowServerError";
 "CroptedData"               = "Something is wrong with Data";
+"MissingImportantKey"       = "One Important key is missing in json.";
 
 //ServerSuccessMessages
 "DataReceived" = "Sucess";

@@ -23,13 +23,9 @@ struct ServerResponse {
 
 struct ServerConfig {
   static let baseUrl = "https://shopicruit.myshopify.com/admin/"
+  static let token = "c32313df0d0ef512ca64d5b336a0d7c6"
   //let prort = "8080"
-  
-  //https://shopicruit.myshopify.com/admin/custom_collections.json?page=1&access_token=c32313df0d0ef512ca64d5b336a0d7c6
-  //https://shopicruit.myshopify.com/admin/collects.json?collection_id=68424466488&page=1&access_token=c32313df0d0ef512ca64d5b336a0d7c6
-  //https://shopicruit.myshopify.com/admin/products.json?ids=2759137027,2759143811&page=1&access_token=c32313df0d0ef512ca64d5b336a0d7c6
-  
-  //Other Server config like version port if need
+
 }
 
 enum Endpoint: String {
@@ -40,4 +36,10 @@ enum Endpoint: String {
   var url: String {
     return rawValue
   }
+}
+
+enum JsonKeys: String{
+  
+  case collections = "custom_collections"
+  case collects   
 }

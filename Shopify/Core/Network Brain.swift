@@ -6,6 +6,9 @@
 //  Copyright © 2019 Morteza Hosseini Zadeh. All rights reserved.
 //
 
+
+// I Use to use this class for networking but recently I'm using RxAlamofire
+
 import Foundation
 
 import Alamofire
@@ -15,6 +18,15 @@ class NetworkingBrain {
   static let sharedInstance = NetworkingBrain()
   
   typealias ServerResponseCallBack = (ServerResponse?,ServiceError?) -> Void
+  
+  /**
+   ALL networking go throw this function
+   - parameter endpoint: The endpoint you want to call in server
+   - parameter httpMethod: GET/POST/DELETE....
+   - parameter parameters: URL or Body Parameters
+   - parameter headers: Additional Headers
+   - parameter isFirstPage: If is the first page
+   */
   
   func sendRequest(endpoint:Endpoint, httpMethod:HTTPMethod, parameters:[String: Any]? = nil, headers:[String:String]? = nil, isFirstPage: Bool = true, callback: @escaping ServerResponseCallBack) {
     

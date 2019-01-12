@@ -13,7 +13,8 @@ target 'Shopify' do
     pod 'AlamofireObjectMapper'
     pod 'RxSwift'
     pod 'RxCocoa'
-    pod 'RxRealm'
+    pod 'RxAlamofire'
+    pod 'thenPromise'
 
 
   # Pods for Montreal Metro

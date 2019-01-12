@@ -8,13 +8,14 @@
 
 import UIKit
 import RxSwift
+import RxCocoa
 
-class CollectionsListViewController: UIViewController {
+class CollectionsListViewController: CustomVC {
   
   
   //View Model Properties
   private let disposeBag = DisposeBag()
-  var viewModel : CollectiosListViewModel!
+  var viewModel : CollectionsListViewModel!
   
   //UI Properties
   @IBOutlet weak var tableView: UITableView!
@@ -22,48 +23,70 @@ class CollectionsListViewController: UIViewController {
   //MARK: - View Life cycle
   override func viewDidLoad() {
     super.viewDidLoad()
+    setupUI()
+    bindViewModel()
+  }
+  
+  func setupUI()  {
+    tableView.refreshControl = UIRefreshControl()
+    tableView.rowHeight = UITableView.automaticDimension
+    tableView.register(CollectionTableViewCell.self)
+
   }
   
   
-  //MARK: - Logics
-  func setDelegatesAndBinders() {
+  //MARK: - Faild Alert
+  var errorBinding: Binder <Error> {
+    return Binder(self, binding: { (vc, error) in
+      let alert = UIAlertController(title: "Error",
+                                    message: error.localizedDescription,
+                                    preferredStyle: .alert)
+      let action = UIAlertAction(title: "Dismiss",
+                                 style: UIAlertAction.Style.cancel,
+                                 handler: nil)
+      
+      alert.addAction(action)
+      vc.present(alert, animated: true, completion: nil)
+    })
+  }
+  
+  
+  //MARK: - Delegates & Binding
+  func bindViewModel() {
+    assert(viewModel != nil)
+    let viewWillAppear = rx.sentMessage(#selector(UIViewController.viewWillAppear(_:)))
+      .mapToVoid()
+      .asDriverOnErrorJustComplete()
     
-    self.tableView.delegate = self
-    self.tableView.dataSource = self
+    let pull = tableView.refreshControl!.rx
+      .controlEvent(.valueChanged)
+      .asDriver()
     
-    viewModel.collections.drive(onNext: {[weak self] _ in
-      self!.tableView.reloadData()
+    let input = CollectionsListViewModel.Input(trigger: Driver.merge(viewWillAppear, pull),
+                                     selection: tableView.rx.itemSelected.asDriver())
+    let output = viewModel.transform(input: input)
+    
+    output.items.drive(tableView.rx.items(cellIdentifier: CollectionTableViewCell.reuseIdentifier, cellType: CollectionTableViewCell.self)) { tv, viewModel, cell in
+      cell.bind(viewModel)
+      
+      }.disposed(by: disposeBag)
+    
+    output.fetching
+      .drive(tableView.refreshControl!.rx.isRefreshing)
+      .disposed(by: disposeBag)
+    
+    output.error
+      .drive(errorBinding)
+      .disposed(by: disposeBag)
+    
+    output.selectedCollection.drive(onNext: { collection in
+      self.navigator.show(segue: .collectionProducts(collectionId: collection.id), sender: self, style: .push)
     })
       .disposed(by: disposeBag)
+
+    
+    
   }
-  
-  
+
 }
 
-//MARK: - TableView
-
-extension CollectionsListViewController :UITableViewDataSource{
-  
-  func numberOfSections(in tableView: UITableView) -> Int {
-    
-    return 1
-  }
-  
-  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 10
-  }
-  
-  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    
-    let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as UITableViewCell
-    
-    return cell
-  }
-}
-
-extension CollectionsListViewController : UITableViewDelegate{
-  
-  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    
-  }
-}

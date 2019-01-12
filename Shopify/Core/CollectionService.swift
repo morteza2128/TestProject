@@ -7,26 +7,38 @@
 //
 
 import Foundation
+import ObjectMapper
+import RxSwift
 
 class CollectionService {
   
-  typealias CollectionResponseCallBack = (_ collections:[Collection], _ error: ServiceError) -> Void
+  typealias CollectionResponseCallBack = (_ collections:Observable<[Collection]>, _ error: ServiceError?) -> Void
   static let shared = CollectionService()
   
-  func getCollections(complitionBlock:CollectionResponseCallBack)  {
+  func getCollections(complitionBlock:@escaping CollectionResponseCallBack)  {
    
-//    NetworkingBrain.sharedInstance.sendRequest(endpoint: .collections, httpMethod: .get) { serverResponse in
-//      
-//      complitionBlock
+//    let params = ["page":"1","access_token":ServerConfig.token]
+//    NetworkingBrain.sharedInstance.sendRequest(endpoint: .collections, httpMethod: .get, parameters: params) { response,error  in
+//
+//      guard let backData = response?.backData, (error == nil) else{
+//        complitionBlock(Observable.empty(),error)
+//        return
+//      }
+//      guard let collections = Mapper<Collection>().mapArray(JSONObject: backData[JsonKeys.collections.rawValue] as? [Any] ) else {
+//        let jsonError = ServiceError(customCode: .missingKey)
+//        complitionBlock(Observable.empty(),jsonError)
+//        return
+//      }
+//      complitionBlock(Observable.of(collections),nil)
 //    }
+
+    
   }
   
   func getCollects()  {
-    
   }
   
   func getProducts()  {
-    
   }
   
   
